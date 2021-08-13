@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration form</title>
+</head>
+<body>
+	<form method="get" action="#">
+		<table border="1">
+			<tfoot align="center">
+				<tr>
+				<td colspan="2">
+					<button type="Submit" name="submit" >Submit</button>
+					<button type="Reset" name="reset">Clear This Form</button>
+				</td>
+			</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>
+						<label for="Last-name"><b>Last Name</b></label>
+					</td>
+					<td><input type="text" name="Last-name" id="Last-name"value="Nakov"></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Frist-name"><b>Frist Name</b></label>
+					</td>
+					<td><input type="text" name="Frist-name" id="Frist-name" value="Svetlin"></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="address"><b>Address</b></label>
+					</td>
+					<td><textarea id="address" name="address">17 Hristo Botev Str. floor 3, apt. 12</textarea></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="city"><b>City</b></label>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td><input type="text" name="city" id="city" value="Kaspichan"></td>
+								<td>
+									<table border="1">
+										<tr>
+											<td><label for="state"><b>State</b></label></td>
+										</tr>
+									</table>
+								</td>
+								<td ><input id="state"type="text" name="state"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="code"><b>Zip/Postal Code</b></label>
+					</td>
+					<td><input type="number" min="0" id="code" name="code" value="9325"></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="contry"><b>Country</b></label>
+						
+					</td>
+					<td>
+						<select name="contry" id="contry">
+							<option selected="">Bulgaria</option>
+							<option>Vietnam</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="tel"><b>Phone(country code, area code, number)</b></label>
+					</td>
+					<td>
+						(+<input type="number" min="0" name="code" id="tel">)
+						<input type="number" min="0" name="code" id="tel"> - 
+						<input type="tel" name="tel" id="tel">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="mail"><b>Email</b></label>
+					</td>
+					<td><input type="Email" name="mail" id="mail"></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="date"><b>Birth date</b></label></td>
+					<td>
+						Month <input type="number" name="month" id="date" min="1" max="12"> 
+						Day <input type="number" name="date" id="date" min="1" max="30">
+						Year(4 digit) <input type="number" name="year" id="date" min="1900" max="2021">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="gender"><b>Gender</b></label></td>
+					<td>
+						<select name="gender" id="gender">
+							<option selected="">Male</option>
+							<option>Female</option>
+							<option>Other</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="start-date1"><b>Starting date</b></label></td>
+					<td>
+						<input type="radio" name="start-date" checked="" id="start-date1" checked="">
+						<label for="start-date1">Spring 2016</label>
+						<input type="radio" name="start-date" id="start-date2">
+						<label for="start-date2">Summer 2016</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="cmt"><b>Comments/Questions</b></label></td>
+					<td>
+						<textarea name="cmt" id="cmt"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>
