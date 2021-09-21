@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student System</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+	<style type="text/css">
+		.row img {
+			width: 100%;
+			max-width: 100%;
+		}
+		nav {
+			height: 50px;
+			background-color: #294a70;
+		}
+		nav ul {
+			list-style: none;
+		}
+		nav li{
+			float: left;
+			padding-left: 15px;
+			padding-right: 15px;
+			line-height: 50px;
+		}
+		nav li a {
+			text-decoration:none;
+			color: #fff;
+			font-size: 16px;
+			display: inline-block;
+		}
+		nav li:hover {
+			background-color:#f4a024;
+		}
+
+		.row p {
+			font-size: 40px;
+			font-weight:bold;
+		}
+		.container {
+			padding-top: 60px;
+		}
+		table, th, td {
+			border: 1px solid black;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="eiu.png" alt="eiu-logo" loading="lazy">
+			</div>
+			<div class="col-md-9">
+				<h1>Trường Đại Học Quốc Tế Miền Đông</h1>
+			</div>
+		</div>
+
+		<nav>
+			<ul>
+				<li><a href="#">Trang chủ</a></li>
+				<li><a href="#">Khoa CNTT</a></li>
+				<li><a href="#">Chương Trình Đào Tạo</a></li>
+				<li><a href="#">Tin Tức</a></li>
+				<li><a href="#">Sự Kiện</a></li>
+				<li><a href="#">Nghiên cứu khoa học</li>
+				<li><a href="#">Giáo vụ</a></li>
+				<li><a href="#">Liên hệ</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div class="container">
+			<table >
+				<thead>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Score</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Ivan</td>
+						<td>Ivanov</td>
+						<td>4.54</td>
+					</tr>
+					<tr>
+						<td>Petar</td>
+						<td>Petrov</td>
+						<td>4.31</td>
+					</tr>
+					<tr>
+						<td>Kiro</td>
+						<td>Kirov</td>
+						<td>4.62</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+</body>
+</html>

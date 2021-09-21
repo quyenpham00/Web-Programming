@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/gif" href="images/index.gif">
+	<title>Flower Shop</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="block-1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 block">
+						<i class="fas fa-phone-alt"></i> Hotline: <b>0968 159 239 - 0838 409 092</b>
+					</div>
+					<div class="col-md-5 block">
+						<i class="fas fa-map-marker-alt"></i> Địa chỉ: <b>01 Nguyễn Cửu Vân, Bình Thạnh, TP.HCM</b>
+					</div>
+					<div class="col-md-3 block">
+						<p><a href="#"><b>Đăng nhập</b></a> hoặc <a href="#"><b>Tạo tài khoản mới</b></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="block-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<a href="#"><img src="images/logo.png" alt="logo"></a>
+					</div>
+					<div class="col-md-3">
+						<form method="get" action="#">
+							<div class="input-group mb-3 search-group">
+								<input type="text" class="form-control" placeholder="Tìm kiếm ...">
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
+								</div>
+							</div>
+						</form>
+						
+					</div>
+					<div class="col-md-3">
+						<div class="media shopping-cart-group">
+							<div class="mr-3 align-self-center">
+								<span><i class="fa fa-shopping-cart"></i></span>
+							</div>
+							<div class="media-body">
+								<h5 class="mt-0 shopping-cart-number">3 sản phẩm</h5>
+								<p class="shopping-cart-price">1,200,000 đ</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<nav class="block-3 ">
+			<div class="container">
+				<ul class="desktop">
+					<li><a href="#">TRANG CHỦ</a></li>
+					<li><a href="#">HOA SINH NHẬT</a></li>
+					<li><a href="#">HOA TÌNH YÊU</a></li>
+					<li><a href="#">HOA CHÚC MỪNG</a></li>
+					<li><a href="#">HOA VĂN PHÒNG</a></li>
+					<li><a href="#">CHỦ ĐỀ</a></li>
+					<li>
+						<a href="#">THIẾT KẾ</a>
+						<ul class="sub-menu">
+							<li><a href="#">HOA CÀNH</a></li>
+							<li><a href="#">HOA SINH NHẬT</a></li>
+							<li><a href="#">HOA GIỎ</a></li>
+							<li><a href="#">HOA HỘP</a></li>
+							<li><a href="#">HOA BÌNH</a></li>
+							<li><a href="#">HOA KỆ</a></li>
+							<li><a href="#">HOA CHẬU</a></li>
+
+						</ul>
+					</li>
+					<li><a href="#">THỂ LOẠI</a></li>
+					<li><a href="#">QUÀ TẶNG</a></li>
+				</ul>
+				
+				<div class="mobile-menu d-sm-block d-md-none">
+					<span class="mobile-menu-icon"><i class="fa fa-align-justify"></i></span>
+					<span class="mobile-menu-title">DANH MỤC SẢN PHẨM</span>
+				</div>
+
+				<div class="mobile-menu-group">
+					<ul class="parent-menu">
+						<li><a href="#">TRANG CHỦ</a></li>
+						<li><a href="#">HOA SINH NHẬT</a></li>
+						<li><a href="#">HOA TÌNH YÊU</a></li>
+						<li><a href="#">HOA CHÚC MỪNG</a></li>
+						<li><a href="#">HOA VĂN PHÒNG</a></li>
+						<li><a href="#">CHỦ ĐỀ</a></li>
+						<li>
+							<a href="#">THIẾT KẾ</a>
+							<ul class="sub-menu">
+								<li><a href="#">HOA CÀNH</a></li>
+								<li><a href="#">HOA SINH NHẬT</a></li>
+								<li><a href="#">HOA GIỎ</a></li>
+								<li><a href="#">HOA HỘP</a></li>
+								<li><a href="#">HOA BÌNH</a></li>
+								<li><a href="#">HOA KỆ</a></li>
+								<li><a href="#">HOA CHẬU</a></li>
+
+							</ul>
+						</li>
+						<li><a href="#">THỂ LOẠI</a></li>
+						<li><a href="#">QUÀ TẶNG</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="product-group">
+						<div class="title">
+							<h1>SẢN PHẨM KHUYẾN MÃI</h1>	
+						</div>
+						
+						<div class="row">
+							<div class="col-6 col-md-3">
+								<div class="product">
+									<div class="product-img">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+										<div class="discount-tag">
+											<p>-10%</p>
+										</div>
+									</div>
+									<div class="product-content">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="code">VS035</p>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+								</div>
+							</div>	
+							<div class="col-6 col-md-3">
+								<div class="product">
+									<div class="product-img">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+										<div class="discount-tag">
+											<p>-10%</p>
+										</div>
+									</div>
+									<div class="product-content">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="code">VS035</p>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+								</div>
+							</div>	
+							
+							<div class="col-6 col-md-3">
+								<div class="product">
+									<div class="product-img">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+										<div class="discount-tag">
+											<p>-10%</p>
+										</div>
+									</div>
+									<div class="product-content">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="code">VS035</p>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+								</div>
+							</div>	
+							
+							<div class="col-6 col-md-3">
+								<div class="product">
+									<div class="product-img">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+										<div class="discount-tag">
+											<p>-10%</p>
+										</div>
+									</div>
+									<div class="product-content">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="code">VS035</p>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+								</div>	
+							</div>	
+							<div class="col-6 col-md-3">
+								<div class="product">
+									<div class="product-img">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+										<div class="discount-tag">
+											<p>-10%</p>
+										</div>
+									</div>
+									<div class="product-content">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="code">VS035</p>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+								</div>
+							</div>	
+							<div class="col-6 col-md-3">
+								<div class="product">
+									<div class="product-img">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+										<div class="discount-tag">
+											<p>-10%</p>
+										</div>
+									</div>
+									<div class="product-content">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="code">VS035</p>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+								</div>
+							</div>	
+							
+							<div class="col-6 col-md-3">
+								<div class="product">
+									<div class="product-img">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+										<div class="discount-tag">
+											<p>-10%</p>
+										</div>
+									</div>
+									<div class="product-content">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="code">VS035</p>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+								</div>
+							</div>	
+							
+							<div class="col-6 col-md-3">
+								<div class="product">
+									<div class="product-img">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+										<div class="discount-tag">
+											<p>-10%</p>
+										</div>
+									</div>
+									<div class="product-content">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="code">VS035</p>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+								</div>	
+							</div>	
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="aside-group">
+						<div class="title">
+							<h1>SẢN PHẨM VỪA XEM</h1>
+						</div>
+						<div class="row">
+							<div class="aside-block col-6 col-md-12">
+								<div class="row product">
+									<div class="col-md-3 image">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+									</div>
+									<div class="col-md-9">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+									<div class="discount-tag-aside">
+										<p>-10%</p>
+									</div>
+								</div>
+							</div>
+							<div class="aside-block col-6 col-md-12">
+								<div class="row product">
+									<div class="col-md-3 image">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+									</div>
+									<div class="col-md-9">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+									<div class="discount-tag-aside">
+										<p>-10%</p>
+									</div>
+								</div>
+							</div>
+							<div class="aside-block col-6 col-md-12">
+								<div class="row product">
+									<div class="col-md-3 image">
+										<img src="images/flower2.jpg" alt="flower" loading="lazy">
+									</div>
+									<div class="col-md-9">
+										<h2>Khai trương hồng phát 2</h2>
+										<p class="o-price">890,000 đ</p>
+										<p class="n-price">807,500 đ</p>
+									</div>
+									<div class="discount-tag-aside">
+										<p>-10%</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="row ad-block">
+				<div class="media ad-group col-md-4">
+					<div class="mr-3 align-self-center icon">
+						<span><i class="fas fa-truck"></i></span>
+					</div>
+					<div class="media-body">
+						<h5 class="mt-0 ad-title">GIAO HÀNG MIỄN PHÍ</h5>
+						<p class="ad-content">Chúng tôi giao hàng miễn phí trong nội thành</p>
+					</div>
+				</div>
+
+				<div class="media ad-group col-md-4">
+					<div class="mr-3 align-self-center icon">
+						<span><i class="fas fa-comments"></i></span>
+					</div>
+					<div class="media-body">
+						<h5 class="mt-0 ad-title">TƯ VẤN TẬN TÂM</h5>
+						<p class="ad-content">Mang đến cho Quý Khách những sản phẩm tốt nhất</p>
+					</div>
+				</div>
+
+				<div class="media ad-group col-md-4">
+					<div class="mr-3 align-self-center icon">
+						<span><i class="fas fa-dollar-sign"></i></i></span>
+					</div>
+					<div class="media-body">
+						<h5 class="mt-0 ad-title">GIÁ THÀNH TỐT NHẤT</h5>
+						<p class="ad-content">Cam kết giá thành & dịch vụ sau bán hàng tốt nhất</p>
+					</div>
+				</div>
+	 		</div>
+		</div>
+		
+		<div class="final-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 footer-block">
+						<h1>HỆ THỐNG</h1>
+						<div class="divider"></div>
+						<a href="#"><p>Hoa sinh nhật</p></a>
+						<a href="#"><p>Hoa cưới</p></a>
+						<a href="#"><p>Hoa chúc mừng</p></a>
+						<a href="#"><p>Chủ đề</p></a>
+						<a href="#"><p>Thiết kế</p></a>
+						<a href="#"><p>Hoa theo thể loại</p></a>
+						<a href="#"><p>Quà tặng</p></a>
+					</div>
+					<div class="col-md-3 footer-block">
+						<h1>CÔNG TY</h1>
+						<div class="divider"></div>
+						<a href="#"><p>Giới thiệu</p></a>
+						<a href="#"><p>Tin Tức</p></a>
+						<a href="#"><p>Tuyển dụng</p></a>
+						<a href="#"><p>Chính sách thành viên</p></a>
+						<a href="#"><p>Chương trình khuyến </p></a>
+					</div>
+					<div class="col-md-3 footer-block">
+						<h1>CÔNG TY</h1>
+						<div class="divider"></div>
+						<a href="#"><p>Hướng dẫn đặt hàng</p></a>
+						<a href="#"><p>Phương thức thanh toán</p></a>
+						<a href="#"><p>Điều khoản mua hàng</p></a>
+						<a href="#"><p>Phí vận chuyển</p></a>
+						<a href="#"><p>Ý nghĩa các loài hoa</p></a>
+						<a href="#"><p>Chăm sóc và bảo quản</p></a>
+					</div>
+					<div class="col-md-4 footer-block">
+						<h1>VIOLET ON WEDNESDAY</h1>
+						<div class="divider"></div>
+						<div class="row">
+							<div class="col-md-4">
+								<p><b>Địa chỉ</b></p>
+							</div>
+							<div class="col-md-6">
+								<p>01 Nguyễn Cửu Vân Bình Thạnh, TP.HCM</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<p><b>Điện thoại</b></p>
+							</div>
+							<div class="col-md-6">
+								<p>08 38 40 90 92</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<p><b>Hotline</b></p>
+							</div>
+							<div class="col-md-6">
+								<p>0968 159 239</p>
+							</div>
+						</div>
+						<p><b>Mọi ý kiến xin vui lòng gửi về</b></p>
+						<p>support@violetwednesday.com</p>
+
+						<i class="fab fa-facebook-square" ></i>
+						<i class="fab fa-youtube"></i>
+						<i class="fab fa-twitter-square"></i>
+						<i class="fab fa-google-plus-square"></i>
+						<i class="fab fa-instagram"></i>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>&copy; 2015 Violet on Wednesday Store. All Rights Reserved. Sponsored by Letsop Solutions. </p>
+			</div>
+		</div>
+ 		
+ 	</footer>
+</body>
+</html>

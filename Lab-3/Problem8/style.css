@@ -1,0 +1,25 @@
+.product{
+	width: 320px;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 5px #ccc;
+	margin: 0 auto;
+	padding: 10px;
+}
+.price{
+	color: red;
+	font-weight: bold;
+}
+img{
+	width: 100%;
+	max-width: 80%;
+	align-items: center;
+	display: block;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+span{
+	font-weight: bold;
+}

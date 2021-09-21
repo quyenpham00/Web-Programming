@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function selectionSort(inputArr) { 
+			let n = inputArr.length;
+
+			for(let i = 0; i < n; i++) {
+				let min = i;
+				for(let j = i+1; j < n; j++){
+					if(inputArr[j] < inputArr[min]) {
+						min=j; 
+					}
+				}
+
+				if (min != i) {
+					let tmp = inputArr[i]; 
+					inputArr[i] = inputArr[min];
+					inputArr[min] = tmp;      
+				}
+			}
+			return inputArr;
+		}
+
+		let inputArr = [2,4,1,5,3,9,7,2,8]
+		inputArr = selectionSort(inputArr);
+		document.write(inputArr);
+	</script>
+</body>
+</html>

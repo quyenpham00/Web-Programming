@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Overlay</title>
+
+	<style type="text/css">
+		#overlay {
+			position: fixed;
+			display: none;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.pop-up-box {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			background-color: #fff;
+			border-radius: 5px;
+			width: 500px;
+			padding: 20px;
+		}
+		.block {
+			margin: 20px;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div id="overlay" onclick="off()">
+		<div class="pop-up-box">
+			<h1>Fade & scale example</h1>
+			<div class="block">
+				<p>We cook the best food in the entire city, with excellent customer service, the best meals and at the besst price, visit us.</p>
+			</div>
+
+			<div class="block">
+				<p>We cook the best food in the entire city, with excellent customer service, the best meals and at the besst price, visit us.</p>
+			</div>
+			<button type="button" onclick="off()">Close</button>
+		</div>	
+	</div>
+
+	<div>
+		<button onclick="on()">Click me</button>
+	</div>
+
+	<script type="text/javascript">
+		function on() {
+		  	document.getElementById("overlay").style.display = "block";
+		}
+
+		function off() {
+		  	document.getElementById("overlay").style.display = "none";
+		}
+	</script>
+</body>
+</html>

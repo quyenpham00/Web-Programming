@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style type="text/css">
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        .topnav a.active {
+            background-color: #4caf05;
+            color: #fff;
+        }
+        .topnav .icon {
+            display: none;
+        }
+        @media (max-width: 767.98px){
+            .topnav li:not(:first-child){
+                display: none;
+            }
+            .topnav li:last-child {
+                display: block;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive li {
+                display: block;
+            }
+            .topnav.responsive a {
+                float: none;
+                text-align: left;
+            }
+        }
+    </style>
+
+    
+    
+</head>
+<body>
+
+   <ul class="topnav " id="myTopnav">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+            <a href="javascript:void(0);" class="icon">
+                <i class="fas fa-align-justify"></i>
+            </a>
+        </li>
+    </ul> 
+
+
+    <script type="text/javascript">
+        $("#myTopnav").click(function() {
+            $(this).toggleClass("responsive");
+        });
+    </script>
+   
+</body>
+</html>

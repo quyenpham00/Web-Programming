@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animated Search Form</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+	<style type="text/css">
+		.container{
+			margin: 0 auto;
+		}
+
+		input {
+			font-size: 18px;
+			width: 150px;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			padding: 12px 40px;
+			background: url(search.PNG) no-repeat;
+			background-position: 5px 5px;
+		}
+
+		input:focus {
+			width: 500px;
+			outline-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form method="get" action="#">
+			<input type="text" name="query" placeholder="Search...">
+		</form>
+	</div>
+	
+</body>
+</html>

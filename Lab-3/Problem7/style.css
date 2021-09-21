@@ -1,0 +1,59 @@
+.prob-7a{
+	width: 600px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 1px 1px 5px #ccc;
+}
+
+.prob-7b{
+	width: 600px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 1px 1px 5px #ccc;
+}
+.prob-7a .title{
+	position: relative;
+	padding-left: 20px;
+	font-weight: bold;
+	color:#50b8e4;
+
+}
+.prob-7a .title::before{
+	content: "";
+	position: absolute;
+	width: 5px;
+	left: 5px;
+	top: 2px;
+	bottom: 2px;
+	transform: skew(-20deg);
+	-webkit-transform:  skew(-20deg);
+	-khtml-transform:  skew(-20deg);
+	background: #dd3333;
+}
+.dotted {
+	border: none;
+	border-top: 1px dotted #ccc;
+	padding-top: 10px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+i, .grey-color {
+	color: #ccc;
+}
+.grey-color >a{
+	color: grey;
+}
+.prob-7b .account {
+	color: #50b8e4;
+}
+/*hr {
+	border: none;
+	border-top: 2px dotted black;
+}*/

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Full screen Overlay Navigation</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style type="text/css">
+    	.overlay {
+    		height: 100%;
+    		width: 0;
+    		position: fixed;
+    		z-index: 1;
+    		top: 0;
+    		left: 0;
+    		background-color: rgba(0, 0, 0, 0.8);
+    		overflow-x: hidden;
+    		transition: 0.5s;
+    	}
+    	.overlay-content {
+    		position: relative;
+    		top: 25%;
+    		width: 100%;
+    		text-align: left;
+    		margin-top: 30px;
+    	}
+    	.overlay a:hover, .overlay a:focus {
+    		color: #f1f1f1;
+    		text-decoration: none;
+    	}
+
+    	.overlay .closebtn {
+    		position: absolute;
+    		top: 20px;
+    		right: 45px;
+    		font-size: 60px;
+    	}
+    	span {
+    		font-size: 30px;
+    		cursor: pointer;
+    	}
+    	a {
+    		text-decoration: none;
+    		color: #ccc;
+    		font-size: 40px;
+    		display: block;
+    	}
+    </style>
+</head>
+<body>
+	<div class="overlay" id="myNav">
+		<a href="javascript:void()" class="closebtn">&times;</a>
+		<div class="overlay-content">
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Clients</a>
+			<a href="#">Contact</a>
+		</div>
+	</div>
+
+	<h2>Full screen Overlay Navigation Example</h2>
+
+	<div>
+		<span id="openNav">&#9776; Open</span>
+	</div>
+
+	<script type="text/javascript">
+		$("#openNav").click(function () {
+			$("#myNav").css("width","100%");
+		});
+		$(".closebtn").click(function(){
+			$("#myNav").css("width","0%");
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+img {
+	width: 100%;
+	max-width: 100%;
+}
+.block-1 {
+	background: #2d3e50;
+    color: #fff;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+.block {
+	padding-top: 10px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+.block-2 img {
+	max-height: 90px;
+	width: auto;
+}
+
+.block-2 .search-group {
+	margin-top: 26px;
+}
+
+.block-2 .shopping-cart-group {
+	margin-top: 20px;
+}
+
+.block-2 span {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: #E83D2B;
+	text-align: center;
+}
+
+.block-2 span i {
+	color: #fff;
+	line-height: 50px;
+}
+
+.shopping-cart-number {
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 0 px;
+}
+
+.shopping-cart-price {
+	color:#E83D2B ;
+	font-weight: bold;
+	margin-top: 0px ;
+}
+
+@media (max-width: 767.98px){
+	.block-2{
+		height: auto;
+	}
+	.block-2 .shopping-cart-group {
+		max-width: 180px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.desktop {
+		display: none;
+	}
+}
+
+.block-3 {
+	background: #662D91;
+}
+
+.block-3 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.desktop > li{
+	display: inline-block;
+	position: relative;
+}
+
+ul.desktop > li > a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+	padding: 10px 10px;
+	position: relative;
+}
+ul.desktop > li:hover > a{
+	background: #793AA9;
+
+}
+ul.desktop > li:hover .sub-menu {
+	display: block;
+}
+.desktop .sub-menu {
+	display: none;
+	position: absolute;
+	padding: 10px !important;
+	top: 44px;
+	left: 0px;
+	width: 200px;
+	box-shadow: 1px 1px 5px #ccc;
+}
+
+.desktop .sub-menu a{
+	color: #662D91;
+	padding: 10px;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.desktop .sub-menu li:hover a {
+	color: #fff;
+	background: #662D91;
+}
+
+.mobile-menu {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.mobile-menu-icon{
+	display: inline-block;
+	border: 1px solid #fff;
+	width: 30px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.mobile-menu-group {
+	display: none;
+}
+/*.mobile-menu-group .parent-menu {
+	list-style: none;
+	margin: 0;
+	padding: 20px;
+	background: #fff;
+	width: 80%;
+	box-sizing: border-box;
+	height: 100vh;
+}
+
+.mobile-menu-group .parent-menu > li >a {
+	text-decoration: none;
+	color: #333;
+	display: block;
+	padding: 10px 15px;
+}
+.mobile-menu-group .parent-menu .sub-menu {
+	display: block;
+	margin: 0;
+	padding: 0 0 0 40px;
+}
+
+.mobile-menu-group .sub-menu {
+
+}*/
+

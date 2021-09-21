@@ -1,0 +1,49 @@
+#myDIV {
+	max-width: 1280px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 15px;
+	border: 1px solid #ccc;
+}
+
+#myUL {
+	list-style: none;
+	padding: 0;
+}
+ul li {
+	position: relative;
+	padding-left: 50px;
+	margin-bottom: 5px;
+	height: 44px;
+	line-height: 44px;
+	
+}
+
+
+ul li:nth-child(odd) {
+	background-color: #ddd;
+}
+ul li:nth-child(even) {
+	background-color: #f9f9f9;
+}
+.close {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	border: none;
+	background-color: #04AA6D;
+	color: #fff;
+	height: 44px;
+	padding: 1px 15px;
+
+}
+.close:hover {
+	background-color: #f44336;
+}
+.checked {
+	background-color: #888888 !important;
+	color: #fff;
+	text-decoration: line-through;
+}
+
+

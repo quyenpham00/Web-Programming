@@ -1,0 +1,16 @@
+img{
+	width: 100%;
+	max-width: 20%;
+}
+.table-title{
+	background: #52b506;
+	color: #fff;
+}
+.custom-table tr:nth-child(odd){
+	background: #fff;
+}
+.custom-table tr:nth-child(even){
+	background: #ececd8;
+}
+
+

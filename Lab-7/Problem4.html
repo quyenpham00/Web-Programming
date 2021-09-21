@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo List</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+	<style type="text/css">
+		#myDIV {
+			width: 500px;
+			margin: 0 auto;
+			background-color: #659ff7;
+			text-align: center;
+			padding: 10px;
+		}
+		#myDIV h1 {
+			color: #fff;
+		}
+		button {
+			background-color: #ccc;
+			border: none;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+		#myUL {
+			list-style: none;
+			width: 500px;
+			margin: 0 auto;
+			padding: 0;
+		}
+		ul li {
+			position: relative;
+			padding: 10px 50px;
+			font-size: 20px;
+		}
+		ul li:nth-child(odd) {
+			background-color: #f9f9f9;
+		}
+		ul li:nth-child(even) {
+			background-color: #eeeeee;
+		}
+		.close {
+			position: absolute;
+			right: 10px;
+			cursor: pointer;
+		}
+		.checked {
+			background-color: #888888 !important;
+			color: #fff;
+			text-decoration: line-through;
+			position: relative;
+		}
+
+		li.checked:before {
+			content: "\2713";
+		    position: absolute;
+		    left: 15px;
+		    top: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="myDIV">
+		<h1>My To Do List</h1>
+		<div class="input-group mb-3">
+			<input type="text" class="form-control" placeholder="Title..." id="myInput">
+			<button onclick="newElement();" type="button">Add</button>
+		</div>
+	</div>
+
+	<ul id="myUL">
+		<li>Hit the gym <span class="close">x</span></li>
+		<li class="checked">Pay bills <span class="close">x</span></li>
+	</ul>
+
+	<script type="text/javascript">
+		let list = document.querySelector('#myUL');
+		list.addEventListener("click", function(e){
+			if (e.target.tagName === 'LI') {
+				e.target.classList.toggle('checked');
+			}else if (e.target.tagName ==='SPAN') {
+				e.target.parentElement.remove();
+			}
+		}, false);
+
+		function newElement(){
+			let inputValue = document.getElementById("myInput");
+			if (inputValue.value==="") {
+				alert("You must write something!");
+			}else {
+				let li = document.createElement("li");
+				li.innerHTML = inputValue.value + "<span class='close'>x</span>";
+				document.getElementById("myUL").appendChild(li);
+				inputValue.value = "";
+			}
+		}	
+	</script>
+</body>
+</html>

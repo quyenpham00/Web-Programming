@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gallery</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="image">
+					<img src="images/img_snow.jpg" alt="snow" loading="lazy" onclick="expandImg(this)">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="image">
+					<img src="images/img_nature.jpg" alt="nature" loading="lazy" onclick="expandImg(this)">
+				</div>
+				
+			</div>
+			<div class="col-md-3">
+				<div class="image">
+					<img src="images/img_mountains.jpg" alt="mountain" loading="lazy" onclick="expandImg(this)">
+				</div>
+				
+			</div>
+			<div class="col-md-3">
+				<div class="image">
+					<img src="images/img_lights.jpg" alt="lights" loading="lazy" onclick="expandImg(this)">
+				</div>
+			</div>
+
+			<div class="col-md-12 block">
+				<button onclick="this.parentElement.style.display='none'" type="button" class="btn-close"></button>
+
+				<img id="expandedImg">
+
+				<div id="imgtext"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		function expandImg(imgs) {
+			let _img = document.getElementById('expandedImg');
+			let text = document.getElementById('imgtext');
+			_img.src = imgs.src;
+			text.innerHTML = imgs.alt;
+			_img.parentElement.style.display = "block";
+		}
+	</script>
+</body>
+</html>

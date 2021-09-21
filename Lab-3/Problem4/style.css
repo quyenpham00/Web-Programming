@@ -1,0 +1,31 @@
+*{
+	background: #515256;
+}
+.id{
+	font-size: 20px;
+	color: #ccc;
+}
+.title{
+	color: #fff;
+	font-style: italic;
+}
+
+.yellow{
+	color: yellow;
+}
+
+.grey {
+	color: #ccc;
+}
+.al{
+	text-align: right;
+}
+
+.red{
+	color:  red;
+	font-weight: bold;
+}
+.or{
+	color: orange;
+	font-weight:bold;
+}

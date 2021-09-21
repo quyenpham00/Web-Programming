@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Management System</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style type="text/css">
+    	a {
+    		text-decoration: none;
+    		color: #333;
+    	}
+
+    	.input-group {
+    		width: 90%;
+    	}
+
+    	.title {
+    		background-color: #eeeeee;
+    		padding: 15px;
+    		box-shadow: 1px 1px 5px #ccc;
+    	}
+    	.title p {
+    		margin: 0;
+    	}
+
+    	.block {
+    		border: 1px solid #333;
+    		margin: 0 20px;
+    	}
+
+    	.header {
+    		border: 1px solid #333;
+    		margin: 15px;
+    	}
+
+    	form {
+    		padding: 15px;
+    	}
+
+    </style>
+</head>
+<body>
+	
+	<div class="row ">
+		<h1>Student Management System</h1>
+		<div class="col-md-2 block">
+			<div>
+				<h1>Class List</h1>
+				<ul class="class-list">
+					
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-9 block">
+			<div class="header">
+				<div class="title">
+					<p>Edit student's information</p>
+				</div>
+				<form class="row g-3">
+					<div class="col-auto">
+						<input type="text" class="form-control" id="id" placeholder="StudentID" >
+					</div>
+					<div class="col-auto">
+						<input type="text" class="form-control" id="first-name" placeholder="First Name">
+					</div>
+					<div class="col-auto">
+						<input type="text" class="form-control" id="last-name" placeholder="Last Name">
+					</div>
+					<div class="col-auto">
+						<select class="form-select" id="depts">
+						
+						</select>
+					</div>
+					<div class="col-auto">
+						<button type="button" class="btn btn-primary mb-3" id="btn-update">Update</button>
+					</div>
+					<div class="input-group mb-3">
+						<input type="text" class="form-control " placeholder="Search" id="search">
+						<button class="btn btn-outline-secondary btn-search" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+					</div>
+				</form>
+			</div>
+
+			<div class="table">
+				<div class="title">
+					<p>Student List</p>
+				</div>
+				<table class="table table-hover">
+					<thead>
+						<th>#</th>
+						<th>Full Name</th>
+						<th>Student ID</th>
+						<th>Department</th>
+						<th>Function</th>
+					</thead>
+					<tbody class="group-list">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			let staffs, depts;
+			$.get(
+				'http://45.76.156.126/getdata.php',
+				{Type: "Staff"},
+				function (data) {
+					staffs = data;
+					staffs.sort(compareName);
+					ShowStudents(staffs);
+				}, "json"
+			);
+
+			$.get(
+				'http://45.76.156.126/getdata.php',
+				{Type: "Department"},
+				function (data) {
+					depts = data;
+					ShowDepts(depts);
+				}, "json"
+			);
+
+
+			function ShowStudents(_staffList) {
+				let _s = "", i = 0;
+
+				for (let _st of _staffList){
+					_s +=`<tr>
+						<td>${++i}</td>
+						<td>${_st.FistName + " " + _st.LastName}</td>
+						<td>${_st.ID}</td>
+						<td>${_st.Department}</td>
+						<td>
+							<button type="button" class="btn edit" data-id="${_st.ID}">Edit</button>
+							<button type="button" class="btn del" data-id="${_st.ID}">Delete</button>
+						</td>
+					</tr>`;
+				}
+				// reset table
+				$(".group-list").html("");
+				// append table
+				$(".group-list").append(_s);
+			}
+
+
+			function ShowDepts(_deptList) {
+				let _s = "", _option;
+
+				for(let _d of _deptList){
+					_s +=`<li><a href="#">${_d}</a></li>`;
+					_option += `<option value="${_d}">${_d}</option>`;
+				}
+				$(".class-list").append(_s);
+				$(".form-select").append(_option);
+			}
+
+			function compareName(a,b) {
+				if (a.LastName < b.LastName) {
+					return -1;
+				}
+				if (a.LastName > b.LastName) {
+					return 1;
+				}
+				return 0;
+			}
+
+			$("#btn-update").click(function(){
+				let id =$("#id").val();
+				let fname =$("#first-name").val();
+				let lname =$("#last-name").val();
+				let dept =$("#depts").val();
+
+				staffs.unshift({
+					"ID":id,
+					"FistName":fname,
+					"LastName":lname,
+					"Email":"",
+					"Department":dept
+				});
+				ShowStudents(staffs);
+			});
+
+
+			$(".group-list").on("click",".del",function(ev){
+				let _confirm = confirm("Are you sure?");
+				if(_confirm){
+					let _nodeDel = ev.target;
+					_nodeDel = $(_nodeDel);
+					let _id = _nodeDel.attr("data-id");
+
+					for(let i in staffs){
+						if (staffs[i].ID == _id) {
+							staffs.splice(i,1);
+							break;
+						}
+					}
+					ShowStudents(staffs);
+				}
+			});
+
+			$(".group-list").on("click",".edit",function(ev){
+				
+				let _nodeDel = ev.target;
+				_nodeDel = $(_nodeDel);
+				let _id = _nodeDel.attr("data-id");
+
+				for(let i in staffs){
+					if (staffs[i].ID == _id) {
+						$("#id").val(staffs[i].ID);
+						$("#first-name").val(staffs[i].FistName);
+						$("#last-name").val(staffs[i].LastName);
+						$("#depts").val(staffs[i].Department);
+						staffs.splice(i,1);
+						break;
+					}
+				}
+				
+			});
+
+			
+
+
+			$(".class-list").on("click","li",function(ev){
+				let _nodeDel = ev.target;
+				_nodeDel = $(_nodeDel);
+				let _deptName = _nodeDel.text();
+
+				let tempList = [];
+
+				for(let _d of staffs){
+					if (_d.Department == _deptName) {
+						tempList.push(_d);
+					}
+				}
+				ShowStudents(tempList);
+				
+			});
+
+			$(".btn-search").click(function () {
+				let _ans = "";
+				let list = [];
+				let _string =$("#search").val();
+
+				for (let s of staffs){
+					let staffName = s.FistName + " " + s.LastName;
+
+					if(staffName.indexOf(_string) > -1){
+						list.push(s);
+					}
+				}
+
+				ShowStudents(list);
+			})
+
+			
+			
+		});
+
+	</script>
+</body>
+</html>

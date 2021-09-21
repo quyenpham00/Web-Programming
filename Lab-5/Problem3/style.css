@@ -1,0 +1,104 @@
+
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+main h1 {
+	font-size: 20px;
+	margin: 0;
+	color: #2c3e50;
+	font-weight: bold;
+}
+
+main h2 {
+	font-size: 16px;
+	color: #2c3e50;
+	font-weight: bold;
+}
+
+.title {
+	width: 100%;
+	border-top: 1px dashed #ccc;
+	border-bottom: 1px dashed #ccc;
+	border-left: 4px solid #662c90;
+	padding: 5px;
+	background: #f7f7f7;
+}
+
+.product {
+	background:#f7f7f7;
+	padding: 0;
+	margin: 20px 0;
+}
+
+.code {
+	color: #662c90;
+	font-weight: bold;
+}
+.o-price {
+	font-weight: bold;
+	color: #ccc;
+	text-decoration: line-through;
+	margin: 0;
+}
+.n-price {
+	font-weight: bold;
+	color: #e83d30;
+	font-size: 18px;
+	margin: 0;
+}
+.product-content {
+	padding: 10px;
+}
+.product{
+	position: relative;
+}
+.discount-tag {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	color: #fff;
+	background: #e83d30;
+	text-align: center;
+}
+.discount-tag p {
+	line-height: 40px;
+	margin: 0;
+}
+
+.aside-group .image {
+	padding: 0;
+}
+.aside-group .product {
+	position: relative;
+}
+.discount-tag-aside {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 40px;
+	color: #fff;
+	background: #e83d30;
+	text-align: center;
+}
+
+.discount-tag-aside p {
+	line-height: 40px;
+	margin: 0;
+}
+
+.aside-block {
+	 border-bottom: 1px dashed #ccc;
+}
+
+.aside-group h2 {
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+@media (max-width: 767.98px){
+	.container {
+		padding: 0;
+	}
+}

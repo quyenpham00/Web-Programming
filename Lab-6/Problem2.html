@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Parsing numbers</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<th>str</th>
+			<th>parseInt(str)</th>
+			<th>parseFloat(str)</th>
+			<th>Number(str)</th>
+			<th>+str</th>
+			<th>str | 0</th>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td id ="col-10">1234</td>
+				<td id="col-11"></td>
+				<td id="col-12"></td>
+				<td id="col-13"></td>
+				<td id="col-14"></td>
+				<td id="col-15"></td>
+			</tr>
+			<tr>
+				<td id="col-20">1238abc</td>
+				<td id="col-21"></td>
+				<td id="col-22"></td>
+				<td id="col-23"></td>
+				<td id="col-24"></td>
+				<td id="col-25"></td>
+			</tr>
+			<tr>
+				<td id="col-30">0.15</td>
+				<td id="col-31"></td>
+				<td id="col-32"></td>
+				<td id="col-33"></td>
+				<td id="col-34"></td>
+				<td id="col-35"></td>
+			</tr>
+			<tr>
+				<td id="col-40">3.14ivan</td>
+				<td id="col-41"></td>
+				<td id="col-42"></td>
+				<td id="col-43"></td>
+				<td id="col-44"></td>
+				<td id="col-45"></td>
+			</tr>
+			<tr>
+				<td id="col-50">Infinity</td>
+				<td id="col-51"></td>
+				<td id="col-52"></td>
+				<td id="col-53"></td>
+				<td id="col-54"></td>
+				<td id="col-55"></td>
+			</tr>
+			<tr>
+				<td id="col-60">99999999999999999999</td>
+				<td id="col-61"></td>
+				<td id="col-62"></td>
+				<td id="col-63"></td>
+				<td id="col-64"></td>
+				<td id="col-75"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script type="text/javascript">
+		let _s1 = document.getElementById("col-10").innerHTML;
+		document.getElementById("col-11").innerHTML = parseInt(_s1);
+		document.getElementById("col-12").innerHTML = parseFloat(_s1);
+		document.getElementById("col-13").innerHTML = Number(_s1);
+		document.getElementById("col-14").innerHTML = +_s1;
+		document.getElementById("col-15").innerHTML = _s1 | 0;
+
+		let _s2 = document.getElementById("col-20").innerHTML;
+		document.getElementById("col-21").innerHTML = parseInt(_s2);
+		document.getElementById("col-22").innerHTML = parseFloat(_s2);
+		document.getElementById("col-23").innerHTML = Number(_s2);
+		document.getElementById("col-24").innerHTML = +_s2;
+		document.getElementById("col-25").innerHTML = _s2 | 0;
+
+		let _s3 = document.getElementById("col-30").innerHTML;
+		document.getElementById("col-31").innerHTML = parseInt(_s3);
+		document.getElementById("col-32").innerHTML = parseFloat(_s3);
+		document.getElementById("col-33").innerHTML = Number(_s3);
+		document.getElementById("col-34").innerHTML = +_s3;
+		document.getElementById("col-35").innerHTML = _s3 | 0;
+
+		let _s4 = document.getElementById("col-40").innerHTML;
+		document.getElementById("col-41").innerHTML = parseInt(_s4);
+		document.getElementById("col-42").innerHTML = parseFloat(_s4);
+		document.getElementById("col-43").innerHTML = Number(_s4);
+		document.getElementById("col-44").innerHTML = +_s4;
+		document.getElementById("col-45").innerHTML = _s4 | 0;
+
+		let _s5 = document.getElementById("col-50").innerHTML;
+		document.getElementById("col-51").innerHTML = parseInt(_s5);
+		document.getElementById("col-52").innerHTML = parseFloat(_s5);
+		document.getElementById("col-53").innerHTML = Number(_s5);
+		document.getElementById("col-54").innerHTML = +_s5;
+		document.getElementById("col-55").innerHTML = _s5 | 0;
+
+		let _s6 = document.getElementById("col-60").innerHTML;
+		document.getElementById("col-61").innerHTML = parseInt(_s6);
+		document.getElementById("col-62").innerHTML = parseFloat(_s6);
+		document.getElementById("col-63").innerHTML = Number(_s6);
+		document.getElementById("col-64").innerHTML = +_s6;
+		document.getElementById("col-65").innerHTML = _s6|0;
+	</script>
+</body>
+</html>

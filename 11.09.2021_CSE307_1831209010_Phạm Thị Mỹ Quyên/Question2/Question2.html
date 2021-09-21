@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To-do List</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="myDIV">
+		<h1>To do List</h1>
+		<div class="input-group mb-3">
+			<input type="text" class="form-control" placeholder="Enter your task" id="myInput">
+			<button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="newElement();">Add</button>
+		</div>
+		<ul id="myUL">
+			<li>Item1 <button type="button" class="close">Delete</button></li>
+			<li>Item1 <button type="button" class="close">Delete</button></li>
+			<li>Item1 <button type="button" class="close">Delete</button></li>
+			<li class="checked">Item2 <button type="button" class="close">Delete</button></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		let list = document.querySelector('#myUL');
+		list.addEventListener("click", function(e){
+			if (e.target.tagName === 'LI') {
+				e.target.classList.toggle('checked');
+			}else if (e.target.tagName ==='BUTTON') {
+				e.target.parentElement.remove();
+			}
+		}, false);
+
+		function newElement(){
+			let inputValue = document.getElementById("myInput");
+			if (inputValue.value==="") {
+				alert("You must write something!");
+			}else {
+				let li = document.createElement("li");
+				li.innerHTML = inputValue.value + "<button type='button' class='close'>Delete</button>";
+				document.getElementById("myUL").appendChild(li);
+				inputValue.value = "";
+			}
+		}	
+	</script>
+</body>
+</html>
